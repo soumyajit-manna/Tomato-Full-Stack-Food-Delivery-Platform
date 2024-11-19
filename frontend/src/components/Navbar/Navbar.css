@@ -162,4 +162,7 @@
     .navbar-menu{
         display: none;
     }
+    .delivery-icon {
+        display: none; /* This hides the delivery icon */
+    }
 }
