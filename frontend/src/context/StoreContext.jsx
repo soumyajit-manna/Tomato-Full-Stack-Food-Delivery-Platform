@@ -11,7 +11,7 @@ const storeContextProvider = (props) => {
 
     const [cartItems, setCartItems] = useState({});
 
-    const url = "http://localhost:4000"
+    const url = "https://tomato-backend-skqy.onrender.com"
 
     const [token, setToken] = useState('')
 
