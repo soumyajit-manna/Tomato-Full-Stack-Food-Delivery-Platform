@@ -57,33 +57,6 @@
 }
 
 
-
-/* Responsive styles for smaller screens */
-@media (max-width:600px) {
-    .login-popup-container {
-        width: 90%; /* Use most of the screen width */
-        padding: 20px; /* Reduce padding */
-        gap: 15px; /* Reduce gap */
-        font-size: 13px; /* Reduce font size */
-    }
-
-    .login-popup-title img {
-        width: 14px; /* Adjust icon size */
-    }
-
-    .login-popup-inputs input {
-        padding: 8px; /* Reduce input padding */
-    }
-
-    .login-popup-container button {
-        padding: 8px; /* Reduce button padding */
-        font-size: 14px; /* Adjust button font size */
-    }
-
-    .login-popup-condition {
-        gap: 5px; /* Reduce gap between condition elements */
-    }
-
     .login-popup-condition input {
         margin-top: 3px; /* Adjust input position */
     }
