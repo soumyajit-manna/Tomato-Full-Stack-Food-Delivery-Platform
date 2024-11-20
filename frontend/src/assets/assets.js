@@ -1,6 +1,7 @@
 import basket_icon from "./basket_icon.png";
 import logo from "./logo.png";
 import logo1 from "./logo1.png";
+import logo1 from "./logo2.jpg";
 import header_img from "./header_img.png";
 import search_icon from "./search_icon.png";
 import menu_1 from "./menu_1.png";
@@ -83,7 +84,8 @@ export const assets = {
   bag_icon,
   parcel_icon,
   Delivery_icon,
-  logo1
+  logo1,
+  logo2
 };
 
 export const menu_list = [
