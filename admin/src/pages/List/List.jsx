@@ -4,7 +4,7 @@ import axios from 'axios'
 import { toast } from 'react-toastify'
 import { useState } from 'react'
 import { useEffect } from 'react'
-import { assets } from '../../assets/assets'
+import { assets,  url } from '../../assets/assets'
 
 const List = ({ url }) => {
 
