@@ -21,8 +21,8 @@ const Footer = () => {
                     <p>At Tomato, we believe in delivering fresh, delicious meals right to your doorstep. Experience the joy of convenient dining with a variety of options tailored to your taste. Your satisfaction is our top priority!</p>
                     <div className="footer-social-icons">
                         <img src={assets.facebook_icon} alt="" />
-                        <a href="https://twitter.com/Mindwrap_Error"><img src={assets.twitter_icon} alt="" /></a>
-                        <a href="https://www.linkedin.com/in/soumyajit-manna-731372270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmnVLky%2BnQlW81FOwJVONuQ%3D%3Dm"><img src={assets.linkedin_icon} alt="" /></a>
+                        <a href="https://twitter.com/Mindwrap_Error" target="_blank" ><img src={assets.twitter_icon} alt="" /></a>
+                        <a href="https://www.linkedin.com/in/soumyajit-manna-731372270?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BmnVLky%2BnQlW81FOwJVONuQ%3D%3Dm" target="_blank"><img src={assets.linkedin_icon} alt="" /></a>
                     </div>
                 </div>
                 <div className="footer-content-center">

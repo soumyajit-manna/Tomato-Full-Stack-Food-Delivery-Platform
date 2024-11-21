@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Add.css"
-import { assets } from '../../assets/assets'
+import { assets, url } from '../../assets/assets'
 import { useState } from 'react'
 import axios from 'axios'
 import { toast } from 'react-toastify'
@@ -25,6 +25,10 @@ const Add = ({ url }) => {
 
     const onSubmitHandler = async (event) => {
         event.preventDefault()
+        if (!image) {
+            toast.error('Image not selected');
+            return null;
+        }
 
 
 
@@ -56,11 +60,11 @@ const Add = ({ url }) => {
         <div className='add'>
             <form className='flex-col' onSubmit={onSubmitHandler}>
                 <div className='add-img-upload flex-col'>
-                    <p>Upload Image</p>
+                    <p>Upload image</p>
+                    <input onChange={(e) => { setImage(e.target.files[0]); e.target.value = '' }} type="file" accept="image/*" id="image" hidden />
                     <label htmlFor="image">
-                        <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="" />
+                        <img src={!image ? assets.upload_area : URL.createObjectURL(image)} alt="" />
                     </label>
-                    <input onChange={(e) => setImage(e.target.files[0])} type="file" id='image' hidden required />
                 </div>
                 <div className='add-product-name flex-col'>
                     <p>Product name</p>

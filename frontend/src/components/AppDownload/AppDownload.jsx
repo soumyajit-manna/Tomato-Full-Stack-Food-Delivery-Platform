@@ -7,8 +7,8 @@ const AppDownload = () => {
         <div className='app-download' id='app-download'>
             <p>For Better Experience Download <br /> <span className='highlight-text'>Tomato.</span> App</p>
             <div className='app-download-platforms'>
-                <img src={assets.play_store} alt="" />
-                <img src={assets.app_store} alt="" />
+                <a href="https://median.co/share/rnkdqq#apk" target="_blank" rel="noopener noreferrer"><img src={assets.play_store} alt="" /></a>
+                <a href="https://median.co/share/rnkdqq#apk" target="_blank" rel="noopener noreferrer"><img src={assets.app_store} alt="" /></a>
             </div>
 
         </div>

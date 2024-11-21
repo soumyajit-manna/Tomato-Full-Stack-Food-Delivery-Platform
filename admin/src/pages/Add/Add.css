@@ -56,3 +56,6 @@
     color: white;
 }
 
+ .login-popup-condition input {
+     margin-top: 3px; /* Adjust input position */
+ }

@@ -19,6 +19,7 @@
     right: 15px;
     cursor: pointer;
     border-radius: 50%;
+    box-sizing: border-box;
 }
 .food-item-img-container .add:hover{
     border: 2px solid #FF4C24;

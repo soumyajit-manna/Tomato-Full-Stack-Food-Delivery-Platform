@@ -1,47 +1,45 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './List.css'
-import axios from 'axios'
-import { toast } from 'react-toastify'
-import { useState } from 'react'
-import { useEffect } from 'react'
-import { assets } from '../../assets/assets'
+import { url } from '../../assets/assets'
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
-const List = ({ url }) => {
+const List = () => {
 
-
-    const [list, setList] = useState([])
+    const [list, setList] = useState([]);
 
     const fetchList = async () => {
-        const response = await axios.get(`${url}/api/food/list`);
-
+        const response = await axios.get(`${url}/api/food/list`)
         if (response.data.success) {
-            setList(response.data.data)
+            setList(response.data.data);
         }
         else {
-            toast.error('Error')
+            toast.error("Error")
         }
     }
 
     const removeFood = async (foodId) => {
-        const response = await axios.post(`${url}/api/food/remove`, { id: foodId })
-        await fetchList()
+        const response = await axios.post(`${url}/api/food/remove`, {
+            id: foodId
+        })
+        await fetchList();
         if (response.data.success) {
-            toast.success(response.data.message)
-        } else {
+            toast.success(response.data.message);
+        }
+        else {
             toast.error("Error")
         }
     }
 
     useEffect(() => {
-        fetchList()
+        fetchList();
     }, [])
-
 
     return (
         <div className='list add flex-col'>
             <p>All Foods List</p>
             <div className='list-table'>
-                <div className='list-table-format title'>
+                <div className="list-table-format title">
                     <b>Image</b>
                     <b>Name</b>
                     <b>Category</b>
@@ -55,7 +53,7 @@ const List = ({ url }) => {
                             <p>{item.name}</p>
                             <p>{item.category}</p>
                             <p>₹{item.price}</p>
-                            <p onClick={() => removeFood(item._id)} className='cursor'>X</p>
+                            <p className='cursor' onClick={() => removeFood(item._id)}>x</p>
                         </div>
                     )
                 })}
