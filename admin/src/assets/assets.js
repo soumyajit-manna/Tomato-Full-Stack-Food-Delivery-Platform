@@ -18,4 +18,4 @@ export const assets ={
     logo2
 }
 
-// export const url = 'https://tomato-backend-skqy.onrender.com'
+export const url = 'https://tomato-backend-skqy.onrender.com'
