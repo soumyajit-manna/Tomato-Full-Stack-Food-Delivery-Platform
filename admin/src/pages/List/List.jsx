@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './List.css'
-import { url } from '../../assets/assets'
+import { url, currency } from '../../assets/assets'
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
@@ -52,7 +52,7 @@ const List = () => {
               <img src={`${url}/images/` + item.image} alt="" />
               <p>{item.name}</p>
               <p>{item.category}</p>
-              <p>₹{item.price}</p>
+              <p>{currency}{item.price}</p>
               <p className='cursor' onClick={() => removeFood(item._id)}>x</p>
             </div>
           )
