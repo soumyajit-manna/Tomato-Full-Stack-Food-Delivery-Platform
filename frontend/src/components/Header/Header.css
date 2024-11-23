@@ -1,35 +1,138 @@
+/* Header container */
 .header {
     height: 34vw;
     margin: 30px auto;
-    background: url('/header_img1.png') no-repeat; /* Default image */
-    background-size: contain;
     position: relative;
-    animation: changeHeaderImage 15s infinite; /* Animate background image every 8s */
-}
-.header-contents{
-    position: absolute;
+    overflow: hidden; /* Prevent overflow during animation */
     display: flex;
-    flex-direction: column;
-    align-items: start;
-    gap: 1.5vw;
-    max-width: 50%;
-    bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s;
+    align-items: center; /* Vertically center the text */
+    justify-content: center; /* Horizontally center the text */
 }
 
-.header-contents h2{
+/* Image container for multiple images */
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keep images behind the text */
+    display: flex; /* Flex layout to arrange sliding images */
+    animation: slideImages 30s infinite; /* Adjust animation duration as needed */
+}
+
+.image-container div {
+    min-width: 100%; /* Each image takes full width of the header */
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+/* Individual images */
+.image-container div:nth-child(1) {
+    background-image: url('/header_img1.jpg');
+}
+.image-container div:nth-child(2) {
+    background-image: url('/header_img2.jpg');
+}
+.image-container div:nth-child(3) {
+    background-image: url('/header_img3.jpg');
+}
+.image-container div:nth-child(4) {
+    background-image: url('/header_img4.jpg');
+}
+.image-container div:nth-child(5) {
+    background-image: url('/header_img5.jpg');
+}
+.image-container div:nth-child(6) {
+    background-image: url('/header_img6.jpg');
+}
+.image-container div:nth-child(7) {
+    background-image: url('/header_img7.jpg');
+}
+.image-container div:nth-child(8) {
+    background-image: url('/header_img8.jpg');
+}
+
+/* Sliding animation */
+@keyframes slideImages {
+    0% {
+        transform: translateX(0%); /* First image fully visible */
+    }
+    12.5% {
+        transform: translateX(0%); /* Stay on the first image */
+    }
+    15% {
+        transform: translateX(-100%); /* Slide to the second image */
+    }
+    27.5% {
+        transform: translateX(-100%); /* Stay on the second image */
+    }
+    30% {
+        transform: translateX(-200%); /* Slide to the third image */
+    }
+    42.5% {
+        transform: translateX(-200%); /* Stay on the third image */
+    }
+    45% {
+        transform: translateX(-300%); /* Slide to the fourth image */
+    }
+    57.5% {
+        transform: translateX(-300%); /* Stay on the fourth image */
+    }
+    60% {
+        transform: translateX(-400%); /* Slide to the fifth image */
+    }
+    72.5% {
+        transform: translateX(-400%); /* Stay on the fifth image */
+    }
+    75% {
+        transform: translateX(-500%); /* Slide to the sixth image */
+    }
+    87.5% {
+        transform: translateX(-500%); /* Stay on the sixth image */
+    }
+    90% {
+        transform: translateX(-600%); /* Slide to the seventh image */
+    }
+    92.5% {
+        transform: translateX(-600%); /* Stay on the seventh image */
+    }
+    100% {
+        transform: translateX(-700%); /* Slide to the eighth image */
+    }
+}
+
+/* Header text and content */
+.header-contents {
+    position: absolute; /* Ensure it stays positioned relative to the header */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Align text to the left */
+    gap: 1.5vw;
+    max-width: 50%;
+    bottom: 10%; /* Position at the bottom of the header */
+    left: 6vw; /* Add some spacing from the left */
+    z-index: 1; /* Ensure content stays above images */
+    text-align: left; /* Align text to the left */
+}
+
+.header-contents h2 {
     font-weight: 500;
     color: white;
     font-size: max(4.5vw, 22px);
+    text-shadow: 2px 2px 4px rgba(255, 99, 71, 0.6), /* Tomato color */
+    -2px -2px 4px rgba(255, 99, 71, 0.6),
+    2px -2px 4px rgba(255, 99, 71, 0.6),
+    -2px 2px 4px rgba(255, 99, 71, 0.6);
 }
 
-.header-contents p{
+.header-contents p {
     color: white;
     font-size: 1vw;
 }
 
-.header-contents button{
+.header-contents button {
     border: none;
     color: #747474;
     font-weight: 500;
@@ -38,43 +141,28 @@
     font-size: max(1vw, 13px);
     border-radius: 50px;
     cursor: pointer;
+    outline: 3px solid tomato; 
+    outline-offset: 4px;
+    
 }
 
-
-
-/* Keyframes for cycling the header background images */
-@keyframes changeHeaderImage {
-    0% {
-        background-image: url('/header_img1.png'); /* First Image */
-    }
-    25% {
-        background-image: url('/header_img2.jpg'); /* Second Image */
-    }
-    50% {
-        background-image: url('/header_img3.jpg'); /* Third Image */
-    }
-    75% {
-        background-image: url('/header_img4.jpg'); /* Fourth Image */
-    }
-    100% {
-        background-image: url('/header_img1.png'); /* Loop back to the first image */
-    }
-}
-
-/* ----- Responsive Header ----- */
+/* Responsive adjustments */
 @media (max-width: 1050px) {
-    .header-contents{
+    .header-contents {
         max-width: 45%;
     }
 }
-@media (max-width:750px) {
-    .header-contents{
+
+@media (max-width: 750px) {
+    .header-contents {
         max-width: 65%;
     }
-    .header-contents p{
+    .header-contents p {
         display: none;
     }
-    .header-contents button{
+  
+    .header-contents button {
         padding: 2vw 4vw;
+        
     }
 }
