@@ -26,6 +26,7 @@
     height: 100%;
     background-size: cover;
     background-position: center center;
+    border-radius: 5px;
 }
 
 /* Individual images */
@@ -162,7 +163,7 @@
     }
   
     .header-contents button {
-        padding: 1vw 2vw;
+        padding: 2vw 4vw;
         outline: 1.5px solid tomato; 
         outline-offset: 2px;
         
