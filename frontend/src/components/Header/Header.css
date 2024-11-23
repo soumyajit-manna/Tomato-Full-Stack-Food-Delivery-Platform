@@ -163,6 +163,8 @@
   
     .header-contents button {
         padding: 2vw 4vw;
+        outline: 1.5px solid tomato; 
+        outline-offset: 2px;
         
     }
 }
