@@ -1,4 +1,4 @@
-.explore-menu{
+.explore-menu {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -9,11 +9,46 @@
     font-weight: 500;
 }
 
-.explore-menu-text{
+.explore-menu-text {
     max-width: 60%;
     color: #808080;
 }
-.explore-menu-list{
+
+.explore-menu-container {
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.scroll-button.left {
+    left: -10px;
+}
+
+.scroll-button.right {
+    right: -10px;
+}
+
+.explore-menu-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -21,10 +56,14 @@
     text-align: center;
     margin: 20px 0px;
     overflow-x: scroll;
+    scroll-behavior: smooth;
+    padding: 10px;
 }
-.explore-menu-list::-webkit-scrollbar{
+
+.explore-menu-list::-webkit-scrollbar {
     display: none;
 }
+
 .explore-menu-list-item img {
     width: 7.5vw;
     min-width: 80px;
@@ -33,28 +72,65 @@
     transition: 0.2s;
     box-sizing: border-box;
 }
-.explore-menu-list-item p{
+
+.explore-menu-list-item p {
     margin-top: 10px;
     color: #747474;
     font-size: max(1.4vw, 16px);
     cursor: pointer;
 }
+
 .explore-menu hr {
     margin: 10px 0px;
     height: 2px;
     background-color: #e2e2e2;
     border: none;
 }
-.explore-menu-list-item img.active{
+
+.explore-menu-list-item img.active {
     border: 4px solid tomato;
     padding: 2px;
-    
 }
+.scroll-icons-right {
+    display: flex;
+    justify-content: flex-end; /* Align to the right */
+    gap: 10px; /* Space between the two icons */
+    margin: 10px 0; /* Space between text and icons */
+    width: 100%; /* Match the parent width */
+}
+
+.scroll-icon {
+    background-color: rgba(255, 99, 71, 0.8); /* Light tomato background */
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px; /* Ensure width is set */
+    height: 40px; /* Ensure height is set */
+    border-radius: 50%; /* Fully rounded */
+    display: flex; /* Use flex to center content */
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(255, 69, 0, 0.3); /* Darker shade for box shadow */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-icon:hover {
+    background-color: rgba(255, 99, 71, 1); /* Full opacity when hovered */
+    box-shadow: 0 6px 8px rgba(255, 69, 0, 0.5); /* Stronger shadow on hover */
+}
+
+
+
+
+
+
+
 
 /* ----- Responsive Explore Menu ----- */
 
-@media (max-width:1050px){
-    .explore-menu-text{
+@media (max-width: 1050px) {
+    .explore-menu-text {
         max-width: 100%;
         font-size: 14px;
     }
