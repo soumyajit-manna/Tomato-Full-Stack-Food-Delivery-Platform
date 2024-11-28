@@ -12,6 +12,11 @@ import menu_5 from "./menu_5.png";
 import menu_6 from "./menu_6.png";
 import menu_7 from "./menu_7.png";
 import menu_8 from "./menu_8.png";
+import menu_9 from "./menu_9.jpg";
+import menu_10 from "./menu_10.jpg";
+import menu_11 from "./menu_11.jpg";
+import menu_12 from "./menu_12.jpg";
+import menu_13 from "./menu_13.jpg";
 
 import food_1 from "./food_1.png";
 import food_2 from "./food_2.png";
@@ -85,10 +90,14 @@ export const assets = {
   parcel_icon,
   Delivery_icon,
   logo1,
-  logo2
+  logo2,
 };
 
 export const menu_list = [
+  {
+    menu_name: "Combo",
+    menu_image: menu_11,
+  },
   {
     menu_name: "Salad",
     menu_image: menu_1,
@@ -98,24 +107,40 @@ export const menu_list = [
     menu_image: menu_2,
   },
   {
-    menu_name: "Deserts",
-    menu_image: menu_3,
+    menu_name: "Biryani",
+    menu_image: menu_9,
   },
   {
-    menu_name: "Sandwich",
-    menu_image: menu_4,
+    menu_name: "Chiken",
+    menu_image: menu_10,
   },
   {
     menu_name: "Cake",
     menu_image: menu_5,
   },
   {
+    menu_name: "Ice Cream",
+    menu_image: menu_13,
+  },
+  {
+    menu_name: "Pizaa",
+    menu_image: menu_12,
+  },
+  {
     menu_name: "Pure Veg",
     menu_image: menu_6,
   },
   {
+    menu_name: "Sandwich",
+    menu_image: menu_4,
+  },
+  {
     menu_name: "Pasta",
     menu_image: menu_7,
+  },
+  {
+    menu_name: "Deserts",
+    menu_image: menu_3,
   },
   {
     menu_name: "Noodles",
