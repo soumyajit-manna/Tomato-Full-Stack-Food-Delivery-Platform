@@ -111,7 +111,7 @@ export const menu_list = [
     menu_image: menu_9,
   },
   {
-    menu_name: "Chiken",
+    menu_name: "Chicken",
     menu_image: menu_10,
   },
   {
@@ -123,7 +123,7 @@ export const menu_list = [
     menu_image: menu_13,
   },
   {
-    menu_name: "Pizaa",
+    menu_name: "Pizza",
     menu_image: menu_12,
   },
   {
